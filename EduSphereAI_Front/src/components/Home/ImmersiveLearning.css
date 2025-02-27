@@ -1,0 +1,70 @@
+.immersive-learning-section {
+    width: 98.89vw;
+    height: 100vh;
+    background: url('https://wallpaperaccess.com/full/3079568.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .content-card {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+  }
+  
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+  }
+  
+
+  .description {
+    font-size: 1.2rem;
+    color: rgb(232, 54, 5) !important;
+    margin-bottom: 20px;
+  }
+  
+
+  .features-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    color: #FFD700;
+    font-size: 1.1rem;
+  }
+  
+  .features-list li {
+    margin-bottom: 10px;
+  }
+  
+
+  .explore-button {
+    background-color: white;
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-top: 20px;
+  }
+  
+  .explore-button:hover {
+    background-color: red;
+    color: white;
+    transform: scale(1.05);
+  }
+
+  
+  

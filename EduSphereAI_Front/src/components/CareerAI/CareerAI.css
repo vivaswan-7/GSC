@@ -1,0 +1,156 @@
+
+.career-ai-container {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+
+.career-ai-container p {
+  font-size: 16px;
+  color: #555;
+}
+
+.info-text {
+  font-style: italic;
+  color: #888;
+}
+
+.generate-btn, .analyze-btn {
+  background: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 15px auto;
+  display: block;
+  width: 250px;  
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.generate-btn:hover, .analyze-btn:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+
+.quiz-sectiono {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left !important;
+}
+
+.quiz-questiono {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: white;
+  border-left: 5px solid #007bff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.mcq-optio {
+  display: flex;              
+  flex-direction: row;        
+  align-items: center;        
+  gap: 8px;                   
+  background: #f1f1f1;
+  padding: 12px;
+  border-radius: 5px;
+  margin: 8px 0;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.mcq-optio:hover {
+  background: #e0e0e0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.mcq-optio input[type="radio"] {
+  transform: scale(1.2);
+  cursor: pointer;
+  flex-shrink: 0;    
+}
+
+.mcq-optio label {
+  font-size: 16px;
+  text-align: left; 
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.mcq-optio input[type="radio"]:checked + label {
+  font-weight: bold;
+  color: #007bff;
+}
+
+
+.career-result {
+  margin-top: 30px;
+  padding: 20px;
+  background: #e3f2fd;
+  border-left: 5px solid #007bff;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.career-result h2 {
+  font-size: 22px;
+  color: #007bff;
+}
+
+.career-result p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.course-recommendations {
+  margin-top: 30px;
+  padding: 20px;
+  background: #fff3e0;
+  border-left: 5px solid #ff9800;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.course-recommendations h2 {
+  font-size: 22px;
+  color: #ff9800;
+}
+
+.course-recommendations ul {
+  list-style: none;
+  padding: 0;
+}
+
+.course-recommendations li {
+  padding: 8px 0;
+  font-size: 16px;
+}
+
+.course-recommendations a {
+  color: #ff9800;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.course-recommendations a:hover {
+  text-decoration: underline;
+}

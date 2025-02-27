@@ -1,0 +1,97 @@
+.marg-top{
+  margin-top: 100px;
+}
+
+
+.skillforge-container {
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .skillforge-container input {
+    width: 80%;
+    padding: 12px;
+    margin: 10px;
+    border: 2px solid #1e88e5;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  .skillforge-container button {
+    background: #1e88e5;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .skillforge-container button:hover {
+    background: #1565c0;
+  }
+  
+  .card {
+    background: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+  }
+  
+  .playlist-card h3 {
+    color: #1e88e5;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #1e88e5;
+    padding-bottom: 5px;
+  }
+  
+  .playlist-item, .youtube-item {
+    background: #f9f9f9;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    list-style-type: none;
+    font-size: 16px;
+  }
+  
+  .youtube-item img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  
+  .course-name {
+    font-weight: bold;
+    color: #2e7d32;
+  }
+  
+  .platform {
+    color: #ff9800;
+  }
+  
+  .description {
+    color: #333;
+  }
+  
+  .course-link {
+    color: #1e88e5;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 5px;
+  }
+  
+  .course-link:hover {
+    text-decoration: underline;
+  }
+  
+  .no-link {
+    color: red;
+    font-size: 14px;
+  }
+  

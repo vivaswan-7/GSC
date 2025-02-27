@@ -1,0 +1,148 @@
+/* General Styling */
+body {
+    background: #eef4fc; /* Light blue background */
+    font-family: "Poppins", sans-serif;
+    color: #1e3a8a;
+    margin: 0;
+    padding: 0;
+  }
+  .marg-top{
+    margin-top: 100px;
+  }
+  /* Main Container */
+  .skillforge-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Heading */
+  .skillforge-container h2 {
+    font-size: 2rem;
+    color: #0d47a1;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Input Field */
+  .input-match {
+    width: 80%;
+    padding: 12px;
+    border: 2px solid #1565c0;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .input-match:focus {
+    border-color: #0d47a1;
+    outline: none;
+  }
+  
+  /* Button */
+  button {
+    background: #0d47a1;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background: #1565c0;
+    transform: scale(1.05);
+  }
+  
+  button:disabled {
+    background: #a1c2f7;
+    cursor: not-allowed;
+  }
+  
+  /* AI Match Card */
+  .match-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .match-card h3 {
+    color: #0d47a1;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Match List */
+  .match-item {
+    font-size: 1.1rem;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  /* Match Icon */
+  .match-icon {
+    font-size: 1.3rem;
+    margin-right: 10px;
+  }
+  
+  /* Colorful Match Items */
+  .match-color-0 {
+    background: linear-gradient(135deg, #90caf9, #0d47a1);
+    color: white;
+  }
+  
+  .match-color-1 {
+    background: linear-gradient(135deg, #81d4fa, #0288d1);
+    color: white;
+  }
+  
+  .match-color-2 {
+    background: linear-gradient(135deg, #b39ddb, #512da8);
+    color: white;
+  }
+  
+  .match-color-3 {
+    background: linear-gradient(135deg, #80cbc4, #00695c);
+    color: white;
+  }
+  
+  .match-color-4 {
+    background: linear-gradient(135deg, #ffcc80, #ff9800);
+    color: white;
+  }
+  
+  /* Match Hover Effect */
+  .match-item:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

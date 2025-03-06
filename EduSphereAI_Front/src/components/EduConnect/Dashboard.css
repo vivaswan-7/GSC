@@ -1,163 +1,170 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to bottom, #e3eaf4, #f0f2f5);
-    margin: 0;
-    padding: 0;
-  }
-  
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #f9f5ff, #e3eaf4);
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.main-content h1 {
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive;
+  color: #4a90e2;
+  margin-bottom: 20px;
+}
+
+.widgets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.widget {
+  background: linear-gradient(135deg, #ffcc70, #ff8a70);
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-weight: bold;
+  font-size: 22px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.widget:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.post-uno{
+  width: 80%;
+  padding: 12px;
+  border: 2px solid #1565c0;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.post-input {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.post-input input, .post-input textarea {
+  width: 100%;
+  border: none;
+  padding: 15px;
+  border-radius: 14px;
+  background: #f3f4f6;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.post-input textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+.post-input button {
+  width: 100%;
+  background: linear-gradient(135deg, #42b883, #35495e);
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.post-input button:hover {
+  background: linear-gradient(135deg, #35495e, #42b883);
+}
+
+.post-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.2);
+}
+
+.post-card h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.post-card p {
+  font-size: 16px;
+  color: #555;
+  margin-top: 8px;
+}
+
+.comment-box {
+  display: flex;
+  align-items: center;
+  background: #f3f4f6;
+  border-radius: 14px;
+  padding: 10px;
+  gap: 10px;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comment-box input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: white;
+  outline: none;
+}
+
+.comment-box button {
+  background: #42b883;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.comment-box button:hover {
+  background: #35495e;
+}
+
+@media (max-width: 768px) {
   .dashboard-container {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    padding: 30px;
+    flex-direction: column;
+    padding: 15px;
   }
-  
-  
-  
-  .main-content {
-    flex: 1;
-    max-width: 750px;
-  }
-
   .widgets {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 30px;
-    justify-content: center;
+    flex-direction: column;
   }
-  
-  .widget {
-    background: linear-gradient(135deg, #1e3a8a, #3358c4);
-    padding: 20px;
-    border-radius: 15px;
-    flex: 1;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    font-weight: bold;
-    font-size: 20px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    cursor: pointer;
-  }
-
-  .main-content h1{
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  
-  .post-input {
-    background: white;
-    padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .post-input input,
-  .post-input textarea {
-    width: 100%;
-    border: none;
-    padding: 14px;
-    border-radius: 12px;
-    background: #f0f2f5;
-    font-size: 16px;
-    transition: all 0.3s ease;
-  }
-  
-  .post-uno{
-    width: 80%;
-    padding: 12px;
-    border: 2px solid #1565c0;
-    border-radius: 8px;
-    font-size: 1rem;
-    margin-bottom: 15px;
-    text-align: center;
-    transition: all 0.3s ease;
-  }
-
-  .post-input textarea {
-    min-height: 90px;
-    resize: none;
-  }
-  
-  .post-input button {
-    width: 100%;
-    background: linear-gradient(135deg, #1877f2, #0047ab);
-    color: white;
-    font-weight: bold;
-    border: none;
-    padding: 14px;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .post-input button:hover {
-    background: linear-gradient(135deg, #0047ab, #1877f2);
-  }
-  
-  .posts-container {
-    margin-top: 25px;
-  }
-  
-  .post-card {
-    background: white;
-    padding: 18px;
-    border-radius: 16px;
-    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
-    margin-bottom: 18px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  .post-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.15);
-  }
-  
-  .post-card h3 {
-    margin: 0;
-    font-size: 19px;
-    color: #333;
-  }
-  
-  .post-card p {
-    font-size: 16px;
-    color: #555;
-    margin-top: 5px;
-  }
-  
-  .comment-box {
-    display: flex;
-    align-items: center;
-    background: #f0f2f5;
-    border-radius: 12px;
-    padding: 6px;
-    gap: 12px;
-    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .comment-box input {
-    flex: 1;
-    padding: 12px;
-    border: none;
-    border-radius: 10px;
-    background: white;
-  }
-  
-  .comment-box button {
-    background: #1e3a8a;
-    color: white;
-    border: none;
-    padding: 12px 16px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .comment-box button:hover {
-    background: #153677;
-  }
-  
+}

@@ -1,107 +1,74 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Box, Typography, Button, Grid, Card, CardContent } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import { motion } from "framer-motion";
+
+const FeatureCard = styled(motion(Card))(({ theme }) => ({
+  backgroundColor: theme.palette.warning.light,
+  color: theme.palette.text.primary,
+  textAlign: "center",
+  padding: theme.spacing(2),
+  borderRadius: theme.shape.borderRadius,
+  transition: "transform 0.3s ease-in-out",
+  '&:hover': {
+    transform: "scale(1.1)",
+    boxShadow: theme.shadows[6],
+  },
+}));
 
 const CareerAISec = () => {
+  const features = [
+    "AI-powered career assessments",
+    "Recommended career paths based on interests",
+    "Industry-relevant skill-building courses",
+    "AI-generated certification exams",
+  ];
+
   return (
-    <section style={styles.wrapper}>
-      <div style={styles.container}>
-        <h2 style={styles.heading}>Career AI</h2>
-        <p style={styles.description}>
+    <Box sx={{ bgcolor: "black", py: 10, display: "flex", justifyContent: "center", px: 3 }}>
+      <Box sx={{ bgcolor: "#FFC107", color: "white", textAlign: "center", p: { xs: 4, md: 6 }, borderRadius: 3, maxWidth: 900, width: "100%" }}>
+        <Typography variant="h3" sx={{ fontWeight: "bold", color: "#330066", fontSize: { xs: "2rem", md: "3rem" } }}>
+          Career AI
+        </Typography>
+        <Typography variant="body1" sx={{ my: 2, maxWidth: 750, mx: "auto", fontSize: { xs: "0.9rem", md: "1rem" } }}>
           Career AI helps learners discover the best career paths based on their skills
           and interests. It provides personalized career recommendations, job market
           trends, and skill-building resources to ensure career success.
-        </p>
-        <div style={styles.features}>
-          {[
-            "AI-powered career assessments",
-            "Recommended career paths based on interests",
-            "Industry-relevant skill-building courses",
-            "AI-generated certification exams",
-          ].map((feature, index) => (
-            <div key={index} style={styles.featureBox} className="feature-box">
-              <span style={styles.bullet}>◆</span>
-              <strong>{feature}</strong>
-            </div>
+        </Typography>
+        <Grid container spacing={3} justifyContent="center" sx={{ mt: 3 }}>
+          {features.map((feature, index) => (
+            <Grid item xs={12} sm={6} md={6} key={index}>
+              <FeatureCard whileHover={{ scale: 1.1 }}>
+                <CardContent>
+                  <Typography variant="body1" sx={{ fontSize: { xs: "0.9rem", md: "1rem" } }}>
+                    ◆ <strong>{feature}</strong>
+                  </Typography>
+                </CardContent>
+              </FeatureCard>
+            </Grid>
           ))}
-        </div>
-        <Link to="/career-ai">  
-        <button style={styles.button}>Explore Career AI</button>
+        </Grid>
+        <Link to="/career-ai" style={{ textDecoration: "none" }}>
+          <Button
+            variant="contained"
+            sx={{
+              mt: 3,
+              bgcolor: "#4A148C",
+              color: "white",
+              fontSize: { xs: "1rem", md: "1.2rem" },
+              fontWeight: "bold",
+              '&:hover': { bgcolor: "#6A1B9A" },
+              px: { xs: 3, md: 5 },
+              py: { xs: 1, md: 1.5 },
+            }}
+          >
+            Explore Career AI
+          </Button>
         </Link>
-      </div>
-    </section>
+      </Box>
+    </Box>
   );
 };
-
-const styles = {
-  wrapper: {
-    backgroundColor: "black",
-    padding: "80px 0", // Ensures equal top and bottom spacing
-    display: "flex",
-    justifyContent: "center",
-  },
-  container: {
-    backgroundColor: "#FFC107",
-    color: "white",
-    textAlign: "center",
-    padding: "60px 20px",
-    borderRadius: "15px",
-    maxWidth: "900px",
-    width: "90%",
-  },
-  heading: {
-    fontSize: "2.5rem",
-    fontWeight: "bold",
-    color: "#330066",
-  },
-  description: {
-    fontSize: "1.2rem",
-    margin: "15px 0",
-    color: "white",
-    maxWidth: "750px",
-    marginLeft: "auto",
-    marginRight: "auto",
-  },
-  features: {
-    marginTop: "20px",
-  },
-  featureBox: {
-    backgroundColor: "#FFEB3B",
-    color: "#000",
-    fontSize: "1rem",
-    fontWeight: "bold",
-    padding: "15px",
-    borderRadius: "10px",
-    margin: "12px auto",
-    width: "85%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    transition: "transform 0.3s ease-in-out", // Animation
-  },
-  bullet: {
-    color: "#007bff",
-    marginRight: "8px",
-  },
-  button: {
-    backgroundColor: "#4A148C",
-    color: "white",
-    fontSize: "1.2rem",
-    fontWeight: "bold",
-    padding: "12px 20px",
-    borderRadius: "10px",
-    border: "none",
-    cursor: "pointer",
-    marginTop: "20px",
-    transition: "0.3s",
-  },
-};
-
-const styleTag = document.createElement("style");
-styleTag.innerHTML = `
-  .feature-box:hover {
-    transform: scale(1.1);
-  }
-`;
-document.head.appendChild(styleTag);
 
 export default CareerAISec;

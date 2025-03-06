@@ -17,6 +17,7 @@ const flags = [
 
 const GlobalEduSphere = () => {
   return (
+    <div className="body">
     <section className="global-edu-section">
       <h2 className="title">EduSphere Around the World</h2>
       <p className="subtitle">
@@ -28,6 +29,7 @@ const GlobalEduSphere = () => {
         ))}
       </div>
     </section>
+    </div>
   );
 };
 

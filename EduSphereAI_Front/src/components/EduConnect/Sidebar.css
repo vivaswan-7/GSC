@@ -1,89 +1,138 @@
 .sidebar {
-    width: 250px;
-    height: 100vh;
-    background: linear-gradient(135deg, #1e3a8a, #1e40af);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: width 0.3s ease;
-    padding-top: 20px;
-    position: fixed;
-  }
-  
-  .sidebar.collapsed {
-    width: 80px;
-  }
-  
-  .toggle-btn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-    margin-bottom: 20px;
-  }
-  
-  .side-nav {
-    list-style: none;
-    padding: 0;
-    width: 100%;
-    align-items: center;
-  }
-  
-  .side-nav li {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 20px;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.1s;
-    position: relative;
-  }
-  
-  .side-nav li:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: scale(1.05);
-  }
-  
-  .side-nav li.active {
-    background: rgba(255, 255, 255, 0.3);
-    font-weight: bold;
-  }
-  
-  .icon {
-    font-size: 22px;
-  }
-  
-  .collapsed .icon {
-    font-size: 28px;
-  }
-  
-  .collapsed li {
-    justify-content: center;
-  }
-  
-  .tooltip {
-    position: absolute;
-    left: 60px;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-  }
-  
-  .collapsed li:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
+  width: 250px;
+  height: 100vh;
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee); /* Soft pastel gradient */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: width 0.3s ease;
+  padding-top: 20px;
+  position: fixed;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.toggle-btn {
+  background: #ff8c94; /* Fun bright color */
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background: #ffaaa5;
+  transform: rotate(180deg);
+}
+
+.side-nav {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-nav li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  position: relative;
+  border-radius: 15px;
+  margin: 10px 0;
+}
+
+.side-nav li:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateX(10px);
+}
+
+.side-nav li.active {
+  background: rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.icon {
+  font-size: 22px;
+  transition: font-size 0.3s;
+}
+
+.collapsed .icon {
+  font-size: 28px;
+}
+
+.collapsed li {
+  justify-content: center;
+}
+
+.tooltip {
+  position: absolute;
+  left: 60px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.collapsed li:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #ffdfba; /* Soft pastel hover color */
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+    height: 100%;
+    padding-top: 10px;
   }
 
-  .nav-link{
-    text-decoration: none;
-    color: aliceblue;
-    
+  .sidebar.collapsed {
+    width: 60px;
   }
-  
+
+  .side-nav li {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .icon {
+    font-size: 18px;
+  }
+
+  .collapsed .icon {
+    font-size: 22px;
+  }
+}

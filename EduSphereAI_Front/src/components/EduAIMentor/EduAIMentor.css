@@ -1,105 +1,134 @@
 .eduai-container {
-    max-width: 800px;
-    margin: 30px auto;
-    margin-top: 85px;
-    padding: 25px;
-    background: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    font-family: "Arial", sans-serif;
-    color: #333;
-  }
-  
-  .eduai-container h1 {
-    font-size: 28px;
-    color: #004aad;
-    margin-bottom: 5px;
-    text-align: center;
-  }
-  
-  .eduai-container p {
-    font-size: 16px;
-    color: #666;
-    text-align: center;
-  }
-  
-  .upload-section, .ai-summary-section, .test-notes-section, .multilingual-section {
-    margin-top: 25px;
+  max-width: 900px;
+  margin: 40px auto;
+  margin-top: 75px;
+  padding: 30px;
+  background: #f9fafe;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  font-family: "Comic Sans MS", "Arial", sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+.eduai-container h1 {
+  font-size: 32px;
+  color: #ff6f61;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.eduai-container p {
+  font-size: 16px;
+  color: #555;
+}
+
+.upload-section, .ai-summary-section, .test-notes-section, .multilingual-section {
+  margin-top: 30px;
+  padding: 25px;
+  background: #d6f8d6;
+  border-radius: 12px;
+  border: 1px solid #b4e7b4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+h2 {
+  font-size: 24px;
+  color: #ffab00;
+  margin-bottom: 15px;
+}
+
+input[type="file"] {
+  display: block;
+  margin: 10px auto;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #f0f0ff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+input[type="file"]:hover {
+  background: #e0e0ff;
+}
+
+button {
+  display: inline-block;
+  padding: 12px 18px;
+  margin: 10px 5px;
+  border: none;
+  background: #ff6f61;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #ff4f41;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+textarea {
+  width: 90%;
+  height: 140px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background: #f8f9fc;
+  resize: none;
+}
+
+.ai-output {
+  margin-top: 20px;
+  padding: 20px;
+  background: #fff8dc;
+  border-radius: 12px;
+  border: 1px solid #f4d03f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ai-output h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #f0f0ff;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+select:hover {
+  background: #e0e0ff;
+}
+
+@media (max-width: 768px) {
+  .eduai-container {
     padding: 20px;
-    background: rgba(4, 24, 69, 0.347);
-    border-radius: 8px;
-    border: 1px solid #ddd;
   }
-  
   h2 {
     font-size: 20px;
-    color: #0056b3;
-    margin-bottom: 10px;
   }
-  
-  input[type="file"] {
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
   button {
-    display: inline-block;
-    padding: 10px 15px;
-    margin: 10px 5px;
-    border: none;
-    background: #007bff;
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    padding: 10px 14px;
   }
-  
-  button:hover {
-    background: #0056b3;
-  }
-  
-  button:disabled {
-    background: #ccc;
-    cursor: not-allowed;
-  }
-  
   textarea {
-    width: 95%;
-    height: 120px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    font-size: 14px;
-    background: #f8f9fc;
-    resize: none;
+    height: 100px;
   }
-  
-  .ai-output {
-    margin-top: 20px;
-    padding: 15px;
-    background: rgba(8, 84, 208, 0.347);
-    border-radius: 8px;
-    border: 1px solid #ddd;
-  }
-  
-  .ai-output h3 {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 8px;
-  }
-  
-  select {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background: #ffffff;
-    font-size: 14px;
-    margin-top: 8px;
-  }
-  
+}

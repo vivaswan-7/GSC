@@ -21,7 +21,7 @@ const BackgroundImage = styled(Box)({
   left: 0,
   width: "100%",
   height: "100%",
-  backgroundImage: "url('https://images.pexels.com/photos/8613083/pexels-photo-8613083.jpeg')",
+  backgroundImage: "url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExODF4Y2sxZWhsOXZuNTFyN3F5dXQyZTgxYW00czFvY2pwdWdlcTNheCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/H0VvGdnwbJux2/giphy.gif')",
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
